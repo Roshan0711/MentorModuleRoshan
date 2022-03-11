@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="row mb-3">
+        <h2 class="col-sm-6">Employee directory</h2>
+    <div class="d-flex flex-row-reverse col mb-3">
+        <a class="btn btn-primary" (click)="onAddEmployee()" role="button">Add Employee</a>
+    </div>
+    </div>
+</div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Team</th>
+              <th scope="col">Designation</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Joining Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let emp of data">
+              <td>{{emp.empID}}</td>
+              <td>{{emp.Name }}</td>
+              <td>{{emp.team}}</td>
+              <td>{{emp.Designation}}</td>
+              <td>{{emp.Gender}}</td>
+              <td>{{emp.date | date:'dd/MM/yyyy'}}</td>
+            </tr>
+           </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

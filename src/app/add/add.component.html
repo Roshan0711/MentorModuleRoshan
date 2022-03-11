@@ -1,0 +1,85 @@
+<h1>Employee Form</h1>
+
+<div class="container col-sm-7">
+    <div class="card">
+        <div class="card-header">
+          Employee
+        </div>
+    
+        <div class="card-body">
+            <form class="form-group" (ngSubmit)="onSubmit(userForm)" #userForm="ngForm">
+               
+                    <div class="row mb-3">
+                        <label class="col-sm-6">Employeeid:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="Employee" 
+                            name="EmployeeID" ngModel required>
+                        </div>
+                    </div>
+                
+                <div class="row mb-3">
+                <label class="col-sm-6">Name:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="Name" 
+                        name="Name" ngModel required>
+                    </div>
+                </div>
+            
+                <div class="form-group row mb-3">
+                <label class="col-sm-6">Team:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="Team" 
+                        name="Team" ngModel required>
+                    </div>
+                </div>
+
+                <div class="row mb-3 ">
+                <label class="col-sm-6">Designation:</label>
+                    <div class="col-sm-6">
+                        <select class="form-control form-select" id="Designation" 
+                        name="Designation" ngModel required>
+                            <option>Tester</option>
+                            <option>Devloper</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class=" form-group row mb-3">
+                <label class="col-sm-6">Gender:</label>
+                    <div class="col-sm-6">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Gender" 
+                            id="inlineRadio1" value="male" ngModel required>
+                            <label class="form-check-label" for="inlineRadio1">male</label>
+                        </div>
+                        
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Gender"
+                            id="inlineRadio2" value="female" ngModel required>
+                            <label class="form-check-label" for="inlineRadio2">female</label>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="form-group row mb-3">
+                <label class="col-sm-6">Joining Date:</label>
+                <div class="col-sm-6">
+                    <input
+                    class="form-control"
+                    id="Date"
+                    name="Date"
+                    placeholder="DD/MM/YYYY"
+                    bsDatepicker
+                    [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY'}" 
+                    ngModel required>
+                </div>   
+            </div>    
+                    
+            <div class="d-flex flex-row-reverse row-mb-3">
+                <button type="submit" class="btn btn-primary" id="button">Add</button>       
+            </div>
+            
+        </form>   
+    </div>
+</div>  
+
