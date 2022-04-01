@@ -18,6 +18,7 @@ export class AddComponent {
   
   onSubmit(form: NgForm){
     console.log(form);
+    //why direct form.value.date not work here
     let date = new Date(form.value.Date).toDateString();
     console.log(date)
     this._employee.importData(form.value.EmployeeID,form.value.Name,form.value.Team,form.value.Designation,form.value.Gender,date)
